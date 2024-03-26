@@ -32,6 +32,14 @@ function App() {
       );
   };
 
+  // const [clear, setClear] = useState({
+  //   name: ""
+  // });
+
+  // function handleForm() {
+  //   setClear(clear)
+  // }
+
   const changeHandler = value => {
     setValue(value)
   }
@@ -53,7 +61,7 @@ function App() {
           <span className='font-light text-gray-400 mb-8 text-center'>Please fill the form</span>
           <div className='py-4'>
             <form ref={form} onSubmit={sendEmail}>
-            <input placeholder='Name' type='text' name='name'/>
+            <input placeholder='Name'  type='text' name='name'/>
             <input placeholder='Email' type='email' name='email'/>
             <input placeholder='State your meeting point' type='text' name='meeting'/>
             <input placeholder='Favorite celebrity' type='text' name='celebrity'/>
@@ -66,7 +74,7 @@ function App() {
             <input placeholder='Phone number' name='number'/>
             <Select name='country' options={options} value={value} onChange={changeHandler} />
             <textarea name='message'  />
-            <button onClick={handleClick} className='cursor-pointer text-white bg-violet-500 flex gap-4 justify-center hover:bg-violet-600'>Add</button>
+            <button onSubmit={handleClick} className='cursor-pointer text-white bg-violet-500 flex gap-4 justify-center hover:bg-violet-600'>Book</button>
             </form>
           </div>
       </div>
